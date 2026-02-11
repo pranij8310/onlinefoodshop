@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test Order Button</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .hero {
+            height: 100vh;
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 1rem 2.5rem;
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            color: white;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.05rem;
+            font-weight: 700;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn:hover {
+            transform: translateY(-4px);
+        }
+
+        .menu {
+            height: 100vh;
+            background: #f5f7fa;
+            padding: 4rem 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .menu h2 {
+            font-size: 3rem;
+            color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <button class="btn" onclick="smoothScrollToMenu()">
+            ORDER NOW
+        </button>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu">
+        <h2>Our Menu</h2>
+    </section>
+
+    <script>
+        function smoothScrollToMenu() {
+            console.log('Button clicked');
+            const menu = document.getElementById('menu');
+            
+            if (menu) {
+                console.log('Menu found, scrolling...');
+                menu.scrollIntoView({ behavior: 'smooth' });
+            } else {
+                console.error('Menu not found!');
+            }
+        }
+    </script>
+</body>
+</html>

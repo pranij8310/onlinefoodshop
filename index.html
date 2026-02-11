@@ -1,0 +1,926 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OnlineFoodShop - Order Delicious Food Online</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                <span>OnlineFoodShop</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li class="cart-icon">
+                    <a href="#cart-info"><i class="fas fa-shopping-cart"></i><span class="cart-badge">0</span></a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span>Welcome to</span>
+                <span class="gradient-text">OnlineFoodShop</span>
+            </h1>
+            <p class="hero-subtitle">Delicious food delivered to your doorstep in 30 minutes</p>
+            <div class="hero-buttons">
+                <button class="btn btn-primary" onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'})" aria-label="Scroll to Menu and order now">
+                    <span class="btn-content">
+                        <i class="fas fa-shopping-bag"></i>
+                        <span class="btn-text">ORDER NOW</span>
+                    </span>
+                    <span class="btn-shine"></span>
+                </button>
+                <button class="btn btn-secondary" onclick="document.getElementById('about').scrollIntoView({behavior: 'smooth'})" aria-label="Learn more about us">
+                    <span class="btn-content">
+                        <i class="fas fa-info-circle"></i>
+                        <span class="btn-text">LEARN MORE</span>
+                    </span>
+                    <span class="btn-shine"></span>
+                </button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <img src="https://media.geeksforgeeks.org/wp-content/uploads/20240711123257/jpeg-optimizer_2151336570.jpg" alt="Food">
+        </div>
+        <div class="floating-shapes">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+        </div>
+    </section>
+
+    <!-- Quick Links Section -->
+    <section class="quick-links">
+        <div class="container">
+            <div class="links-grid">
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h3>Special Offers</h3>
+                    <p>Get up to 50% discount on selected items</p>
+                    <a href="#menu" class="link-btn">View Deals →</a>
+                </div>
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Fast Delivery</h3>
+                    <p>Order now and receive within 30 minutes</p>
+                    <a href="contact.html" class="link-btn">Track Order →</a>
+                </div>
+                <div class="link-card">
+                    <div class="link-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3>Premium Quality</h3>
+                    <p>Fresh ingredients & authentic recipes</p>
+                    <a href="#about" class="link-btn">Learn More →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>About OnlineFoodShop</h2>
+                    <p>Welcome to the ultimate destination for food lovers! At OnlineFoodShop, we bring the best culinary experiences right to your table. With a carefully curated menu featuring dishes from around the world, every meal is prepared with fresh ingredients and passion.</p>
+                    <ul class="about-features">
+                        <li><i class="fas fa-check-circle"></i> 24/7 Customer Support</li>
+                        <li><i class="fas fa-check-circle"></i> 100% Fresh & Hygienic</li>
+                        <li><i class="fas fa-check-circle"></i> Free Delivery on Orders Above $25</li>
+                        <li><i class="fas fa-check-circle"></i> Loyalty Rewards Program</li>
+                    </ul>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Section -->
+    <section id="menu" class="menu">
+        <div class="container">
+            <div class="section-header">
+                <h2>Featured Menu</h2>
+                <p>Handpicked delicacies just for you</p>
+            </div>
+
+            <!-- Filter Buttons -->
+            <div class="menu-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="Starters">Starters</button>
+                <button class="filter-btn" data-filter="pizza">Pizza</button>
+                <button class="filter-btn" data-filter="burgers">Burgers</button>
+                <button class="filter-btn" data-filter="Rice">Rice</button>
+                <button class="filter-btn" data-filter="desserts">Desserts</button>
+                <button class="filter-btn" data-filter="beverages">Beverages</button>
+            </div>
+
+            <!-- Menu Items Grid -->
+            <div class="menu-grid">
+                <!-- Burger Item 1 -->
+                <div class="menu-item" data-category="burgers">
+                    <div class="item-image">
+                        <img src="ClassicCheeseBurger.jpg" alt="Cheese Burger">
+                        <span class="badge">₹299</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Classic Cheese Burger</h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(45 reviews)</span>
+                        </div>
+                        <p>Juicy beef patty with melted cheddar, lettuce & tomato</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Burger Item 2 -->
+                <div class="menu-item" data-category="burgers">
+                    <div class="item-image">
+                        <img src="BaconDeluxeBurger.webp" alt="Bacon Burger">
+                        <span class="badge special">₹149</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Bacon Deluxe Burger</h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(78 reviews)</span>
+                        </div>
+                        <p>Crispy bacon, double patty, special sauce & more</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Burger Item 3 -->
+                <div class="menu-item" data-category="burgers">
+                    <div class="item-image">
+                        <img src="BBQBurger.jpeg" alt="Bacon Burger">
+                        <span class="badge special">₹199</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Hot BBQ Burger</h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(78 reviews)</span>
+                        </div>
+                        <p>Crispy bacon, double patty, special sauce & more</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Starters Item 1 -->
+                <div class="menu-item" data-category="Starters">
+                    <div class="item-image">
+                        <img src="malai.jpg" alt="Malai Paneer Tikka">
+                        <span class="badge">₹299</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Malai Paneer Tikka</h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(45 reviews)</span>
+                        </div>
+                        <p>Juicy beef patty with melted cheddar, lettuce & tomato</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Starters Item 2 -->
+                <div class="menu-item" data-category="Starters">
+                    <div class="item-image">
+                        <img src="hara.jpg" alt="Hara Bhara Kabab">
+                        <span class="badge">₹299</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Hara Bhara Kabab</h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(45 reviews)</span>
+                        </div>
+                        <p>Juicy beef patty with melted cheddar, lettuce & tomato</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Starters Item 3 -->
+                <div class="menu-item" data-category="Starters">
+                    <div class="item-image">
+                        <img src="mus.webp" alt="Stuffed Tandoori Mushroom">
+                        <span class="badge">₹299</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Stuffed Tandoori Mushroom</h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(45 reviews)</span>
+                        </div>
+                        <p>Juicy beef patty with melted cheddar, lettuce & tomato</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Starters Item 4 -->
+                <div class="menu-item" data-category="Starters">
+                    <div class="item-image">
+                        <img src="Bruschetta.webp" alt="Bruschetta">
+                        <span class="badge">₹299</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Bruschetta</h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(45 reviews)</span>
+                        </div>
+                        <p>Juicy beef patty with melted cheddar, lettuce & tomato</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Starters Item 5 -->
+                <div class="menu-item" data-category="Starters">
+                    <div class="item-image">
+                        <img src="pasanda.jpg" alt="Paneer Pasanda">
+                        <span class="badge">₹299</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Paneer Pasanda</h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(45 reviews)</span>
+                        </div>
+                        <p>Juicy beef patty with melted cheddar, lettuce & tomato</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Starters Item 6 -->
+                <div class="menu-item" data-category="Starters">
+                    <div class="item-image">
+                        <img src="corn.avif" alt="Cheesy Corn Balls">
+                        <span class="badge">₹299</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Cheesy Corn Balls</h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(45 reviews)</span>
+                        </div>
+                        <p>Juicy beef patty with melted cheddar, lettuce & tomato</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rice Item 1 -->
+                <div class="menu-item" data-category="Rice">
+                    <div class="item-image">
+                        <img src="risotto.jpg" alt="Chicken Risotto">
+                        <span class="badge">₹299</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Chicken Risotto</h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(45 reviews)</span>
+                        </div>
+                        <p>Juicy beef patty with melted cheddar, lettuce & tomato</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rice Item 2 -->
+                <div class="menu-item" data-category="Rice">
+                    <div class="item-image">
+                        <img src="Paella.webp" alt="Paella">
+                        <span class="badge">₹299</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Paella</h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(45 reviews)</span>
+                        </div>
+                        <p>Juicy beef patty with melted cheddar, lettuce & tomato</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rice Item 3 -->
+                <div class="menu-item" data-category="Rice">
+                    <div class="item-image">
+                        <img src="pulao.jpg" alt="Zaffrani Pulao">
+                        <span class="badge">₹299</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Zaffrani Pulao</h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(45 reviews)</span>
+                        </div>
+                        <p>Juicy beef patty with melted cheddar, lettuce & tomato</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rice Item 4 -->
+                <div class="menu-item" data-category="Rice">
+                    <div class="item-image">
+                        <img src="yakhni.jpg" alt="Yakhni Pulao">
+                        <span class="badge">₹299</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Yakhni Pulao</h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(45 reviews)</span>
+                        </div>
+                        <p>Juicy beef patty with melted cheddar, lettuce & tomato</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rice Item 5 -->
+                <div class="menu-item" data-category="Rice">
+                    <div class="item-image">
+                        <img src="cb.jpg" alt="Hyderabadi Chicken Biriyani">
+                        <span class="badge">₹299</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Hyderabadi Chicken Biriyani</h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(45 reviews)</span>
+                        </div>
+                        <p>Juicy beef patty with melted cheddar, lettuce & tomato</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Rice Item 6 -->
+                <div class="menu-item" data-category="Rice">
+                    <div class="item-image">
+                        <img src="mb.jpg" alt="Hyderabadi Mutton Biriyani">
+                        <span class="badge">₹299</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Hyderabadi Mutton Biriyani</h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(45 reviews)</span>
+                        </div>
+                        <p>Juicy beef patty with melted cheddar, lettuce & tomato</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Item 1 -->
+                <div class="menu-item" data-category="pizza">
+                    <div class="item-image">
+                        <img src="PIZZA-MARGHERITA.jpg" alt="Margherita Pizza">
+                        <span class="badge">₹299</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Margherita Pizza</h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(52 reviews)</span>
+                        </div>
+                        <p>Fresh mozzarella, basil & tomato sauce</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Item 2 -->
+                <div class="menu-item" data-category="pizza">
+                    <div class="item-image">
+                        <img src="PepperoniParadise.webp" alt="Pepperoni Pizza">
+                        <span class="badge">₹399</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Pepperoni Paradise</h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(89 reviews)</span>
+                        </div>
+                        <p>Loaded with pepperoni & extra cheese</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Item 3 -->
+                <div class="menu-item" data-category="pizza">
+                    <div class="item-image">
+                        <img src="Volcano.jpg" alt="Margherita Pizza">
+                        <span class="badge">₹299</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Volcano Pizza</h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(52 reviews)</span>
+                        </div>
+                        <p>Fresh mozzarella, basil & tomato sauce</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pizza Item 4 -->
+                <div class="menu-item" data-category="pizza">
+                    <div class="item-image">
+                        <img src="mexican.webp" alt="Margherita Pizza">
+                        <span class="badge">₹299</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Mexican Pizza</h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(52 reviews)</span>
+                        </div>
+                        <p>Fresh mozzarella, basil & tomato sauce</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dessert Item 1 -->
+                <div class="menu-item" data-category="desserts">
+                    <div class="item-image">
+                        <img src="chocolate-fudge-cake-5.jpg" alt="Chocolate Cake">
+                        <span class="badge">₹199</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Chocolate Fudge Cake</h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(120 reviews)</span>
+                        </div>
+                        <p>Rich chocolate layers with fudge frosting</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dessert Item 2 -->
+                <div class="menu-item" data-category="desserts">
+                    <div class="item-image">
+                        <img src="white.jpg" alt="Chocolate Cake">
+                        <span class="badge">₹149</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Milk Fudge Cake</h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(120 reviews)</span>
+                        </div>
+                        <p>Rich chocolate layers with fudge frosting</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dessert Item 3 -->
+                <div class="menu-item" data-category="desserts">
+                    <div class="item-image">
+                        <img src="hqdefault.jpg" alt="Chocolate Cake">
+                        <span class="badge">₹199</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Apricot Delight</h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(120 reviews)</span>
+                        </div>
+                        <p>Rich chocolate layers with fudge frosting</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dessert Item 4 -->
+                <div class="menu-item" data-category="desserts">
+                    <div class="item-image">
+                        <img src="strawberry.jpg" alt="Chocolate Cake">
+                        <span class="badge">₹249</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Strawberry</h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(120 reviews)</span>
+                        </div>
+                        <p>Rich chocolate layers with fudge frosting</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Dessert Item 5 -->
+                <div class="menu-item" data-category="desserts">
+                    <div class="item-image">
+                        <img src="kunafa.jpg" alt="Chocolate Cake">
+                        <span class="badge">₹250</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Premium Kunafa Pistachio </h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>(120 reviews)</span>
+                        </div>
+                        <p>Rich chocolate layers with fudge frosting</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beverage Item 1 -->
+                <div class="menu-item" data-category="beverages">
+                    <div class="item-image">
+                        <img src="coffee.jpg" alt="Iced Coffee">
+                        <span class="badge">₹99</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Cold Brew Coffee</h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(95 reviews)</span>
+                        </div>
+                        <p>Smooth, refreshing cold brew with ice</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beverage Item 2 -->
+                <div class="menu-item" data-category="beverages">
+                    <div class="item-image">
+                        <img src="dry.png" alt="Iced Coffee">
+                        <span class="badge">₹129</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Dry Fruit Shake</h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(95 reviews)</span>
+                        </div>
+                        <p>Smooth, refreshing cold brew with ice</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Beverage Item 3 -->
+                <div class="menu-item" data-category="beverages">
+                    <div class="item-image">
+                        <img src="green.jxl" alt="Iced Coffee">
+                        <span class="badge">₹149</span>
+                    </div>
+                    <div class="item-content">
+                        <h3>Green Matcha</h3>
+                        <div class="item-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <span>(95 reviews)</span>
+                        </div>
+                        <p>Smooth, refreshing cold brew with ice</p>
+                        <div class="item-footer">
+                            <button class="btn btn-small btn-primary" onclick="addItemToCart(this)">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">10K+</div>
+                    <div class="stat-label">Happy Customers</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Menu Items</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Restaurant Partners</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">4.8★</div>
+                    <div class="stat-label">Average Rating</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Subscribe to Our Newsletter</h2>
+                <p>Get exclusive deals and updates delivered to your inbox</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" id="newsletterEmail" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>OnlineFoodShop</h3>
+                    <p>Your favorite destination for food delivery</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/onlinefoodshop" target="_blank" rel="noopener noreferrer" class="social-icon" title="Follow us on Facebook" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                            <span class="social-tooltip">Facebook</span>
+                        </a>
+                        <a href="https://www.twitter.com/onlinefoodshop" target="_blank" rel="noopener noreferrer" class="social-icon" title="Follow us on Twitter" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                            <span class="social-tooltip">Twitter</span>
+                        </a>
+                        <a href="https://www.instagram.com/_am_pranesh" target="_blank" rel="noopener noreferrer" class="social-icon" title="Follow us on Instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span class="social-tooltip">Instagram</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/pranesh-j-i/" target="_blank" rel="noopener noreferrer" class="social-icon" title="Connect with us on LinkedIn" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                            <span class="social-tooltip">LinkedIn</span>
+                        </a>
+                        <a href="https://www.youtube.com/@onlinefoodshop" target="_blank" rel="noopener noreferrer" class="social-icon" title="Subscribe to our YouTube" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                            <span class="social-tooltip">YouTube</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#menu">Menu</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="contact.html">Help Center</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Delivery Info</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>📞 +91 7619452752</p>
+                    <p>📧 pjime7619@gmail.com</p>
+                    <p>📍 123 Food Street, Bangalore 570001</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OnlineFoodShop. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

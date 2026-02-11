@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - OnlineFoodShop</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu+Mono:wght@400;700&family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fas fa-utensils"></i>
+                <span>OnlineFoodShop</span>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="index.html#home">Home</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+<section class="hero hero-contact">
+    <div class="hero-content">
+        <div class="hero-text-wrapper">
+            <h1 class="hero-heading">
+                <span class="word">G</span>
+                <span class="word">e</span>
+                <span class="word">t</span>
+                <span class="word">I</span>
+                <span class="word">n</span>
+                <span class="word">T</span>
+                <span class="word">o</span>
+                <span class="word">u</span>
+                <span class="word">c</span>
+                <span class="word">h</span>
+                <span class="word">W</span>
+                <span class="word">i</span>
+                <span class="word">t</span>
+                <span class="word">h</span>
+                <span class="word">U</span>
+                <span class="word">s</span>
+            </h1>
+            <p class="hero-description">We'd love to hear from you. Send us your queries and concerns.</p>
+        </div>
+        <div class="hero-icons">
+            <div class="icon-float icon-1" title="Send us an email">
+                <a href="mailto:pjime7619@gmail.com" class="icon-link">
+                    <i class="fas fa-envelope"></i>
+                    <span class="tooltip">Email Us</span>
+                </a>
+            </div>
+            <div class="icon-float icon-2" title="Call us now">
+                <a href="tel:+917619452752" class="icon-link">
+                    <i class="fas fa-phone"></i>
+                    <span class="tooltip">Call Us</span>
+                </a>
+            </div>
+            <div class="icon-float icon-3" title="Follow us on Instagram">
+                <a href="https://www.instagram.com/_am_pranesh" target="_blank" rel="noopener noreferrer" class="icon-link">
+                    <i class="fab fa-instagram"></i>
+                    <span class="tooltip">Instagram</span>
+                </a>
+            </div>
+            <div class="icon-float icon-4" title="Connect on LinkedIn">
+                <a href="https://www.linkedin.com/in/pranesh-j-i/" target="_blank" rel="noopener noreferrer" class="icon-link">
+                    <i class="fab fa-linkedin"></i>
+                    <span class="tooltip">LinkedIn</span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="hero-bg">
+        <div class="bg-shape shape-1"></div>
+        <div class="bg-shape shape-2"></div>
+        <div class="bg-shape shape-3"></div>
+        <div class="bg-animation"></div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-wrapper">
+                <!-- Contact Info Cards -->
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3>Call Us</h3>
+                        <p>+91 7619452752</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3>Email Us</h3>
+                        <p>pjime7619@gmail.com</p>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3>Visit Us</h3>
+                        <p>123 Food Street, Bangalore 570001</p>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="form-container">
+                    <h2>Send us a Message</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="query">
+                                <i class="fas fa-list"></i> Type of Query
+                            </label>
+                            <select name="myQuery" id="query" required>
+                                <option value="" disabled selected>Select a category</option>
+                                <option value="order">Order Related Issues</option>
+                                <option value="site">Site Related Issues</option>
+                                <option value="complaint">Complaint Related Issues</option>
+                                <option value="delivery">Delivery Related Issues</option>
+                                <option value="others">Others</option>
+                            </select>
+                            <span class="select-icon"><i class="fas fa-chevron-down"></i></span>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">
+                                    <i class="fas fa-user"></i> Full Name
+                                </label>
+                                <input type="text" id="name" name="myName" 
+                                    placeholder="Enter your full name" required>
+                                <span class="error-message" id="nameError"></span>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">
+                                    <i class="fas fa-envelope"></i> Email Address
+                                </label>
+                                <input type="email" id="email" name="myEmail" 
+                                    placeholder="Enter your email" required>
+                                <span class="error-message" id="emailError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="pho">
+                                <i class="fas fa-phone"></i> Phone Number
+                            </label>
+                            <input type="tel" id="pho" name="myPhone" 
+                                placeholder="Enter your phone number" required>
+                            <span class="error-message" id="phoneError"></span>
+                        </div>
+
+                        <div class="form-group radio-group">
+                            <label>
+                                <i class="fas fa-question-circle"></i> Are you a member of OnlineFoodShop?
+                            </label>
+                            <div class="radio-options">
+                                <div class="radio-item">
+                                    <input type="radio" id="member-yes" name="eligible" value="yes" required>
+                                    <label for="member-yes">Yes</label>
+                                </div>
+                                <div class="radio-item">
+                                    <input type="radio" id="member-no" name="eligible" value="no" required>
+                                    <label for="member-no">No</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">
+                                <i class="fas fa-pen"></i> Elaborate Your Query
+                            </label>
+                            <textarea id="message" name="mesg" 
+                                placeholder="Please provide details about your query..." 
+                                rows="6" required maxlength="500"></textarea>
+                            <span class="char-count"><span id="charCount">0</span>/500</span>
+                            <span class="error-message" id="messageError"></span>
+                        </div>
+
+                        <div class="form-actions">
+                            <button type="submit" class="btn btn-submit">
+                                <i class="fas fa-paper-plane"></i> Submit
+                            </button>
+                            <button type="reset" class="btn btn-reset">
+                                <i class="fas fa-redo"></i> Reset
+                            </button>
+                        </div>
+                    </form>
+
+                    <!-- Success Message -->
+                    <div id="successMessage" class="success-message">
+                        <div class="success-content">
+                            <i class="fas fa-check-circle"></i>
+                            <h3>Message Sent Successfully!</h3>
+                            <p>Thank you for contacting us. We'll get back to you soon.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section">
+        <div class="container">
+            <h2>Frequently Asked Questions</h2>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How long does delivery take?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We deliver within 30-45 minutes in most areas. Delivery times may vary based on location and order complexity.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What are your customer support hours?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our support team is available 24/7 to assist you with any queries or concerns.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>How can I track my order?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>You can track your order in real-time using the order tracking feature in your account dashboard.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <span>What payment methods do you accept?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept all major credit cards, digital wallets, and cash on delivery in selected areas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>OnlineFoodShop</h3>
+                    <p>Your favorite destination for food delivery</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/onlinefoodshop" target="_blank" rel="noopener noreferrer" class="social-icon" title="Follow us on Facebook" aria-label="Facebook">
+                            <i class="fab fa-facebook"></i>
+                            <span class="social-tooltip">Facebook</span>
+                        </a>
+                        <a href="https://www.twitter.com/onlinefoodshop" target="_blank" rel="noopener noreferrer" class="social-icon" title="Follow us on Twitter" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                            <span class="social-tooltip">Twitter</span>
+                        </a>
+                        <a href="https://www.instagram.com/_am_pranesh" target="_blank" rel="noopener noreferrer" class="social-icon" title="Follow us on Instagram" aria-label="Instagram">
+                            <i class="fab fa-instagram"></i>
+                            <span class="social-tooltip">Instagram</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/pranesh-j-i/" target="_blank" rel="noopener noreferrer" class="social-icon" title="Connect with us on LinkedIn" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                            <span class="social-tooltip">LinkedIn</span>
+                        </a>
+                        <a href="https://www.youtube.com/@onlinefoodshop" target="_blank" rel="noopener noreferrer" class="social-icon" title="Subscribe to our YouTube" aria-label="YouTube">
+                            <i class="fab fa-youtube"></i>
+                            <span class="social-tooltip">YouTube</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html#home">Home</a></li>
+                        <li><a href="index.html#menu">Menu</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                        <li><a href="index.html#about">About</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Support</h4>
+                    <ul>
+                        <li><a href="#contact">Help Center</a></li>
+                        <li><a href="#">Track Order</a></li>
+                        <li><a href="#">Delivery Info</a></li>
+                        <li><a href="#faq">FAQs</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact Us</h4>
+                    <p>📞 +91 7619452752</p>
+                    <p>📧 pjime7619@gmail.com</p>
+                    <p>📍 123 Food Street, Bangalore 570001</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 OnlineFoodShop by Pranesh. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
