@@ -28,8 +28,6 @@ Double-click index.html
 OR open with Live Server in VS Code.
 🌐 Live Demo
 https://pranij8310.github.io/onlinefoodshop/
-📸 Screenshots
-(Add screenshots of your project UI here)
 🎯 Learning Outcomes
 Practiced frontend web development
 Improved DOM manipulation skills
